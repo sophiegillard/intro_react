@@ -1,23 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import Searchbar from './components/Searchbar.js';
+import Button from './components/Button.js';
+import List from './components/Listtask.js';
+
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+      <header>
+        <h1> My Todo App </h1>
       </header>
+      <div className="content">
+          <Searchbar />
+          <Button />
+      </div>
+        <div className="tasks">
+            <h4>Todos</h4>
+            <List />
+        </div>
     </div>
   );
 }
